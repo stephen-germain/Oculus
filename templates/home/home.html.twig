@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center text-home">
+                    <h1>{{ controller_name }}</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center example-wrapper mt-5">
+                    <a href="#"><img src="{{ asset('img/oculus-logo.png') }}" alt="oculus logo - oculus rift poster PNG image with transparent background@toppng.com"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

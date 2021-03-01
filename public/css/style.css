@@ -1,0 +1,58 @@
+
+/****************
+**** GENERAL ****
+****************/
+
+/* body{
+    background-image: url('../img/background-3883181_1920.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+} */
+
+
+/****************
+**** HEADER *****
+****************/
+
+/* header{
+    height: 200px;
+} */
+
+ #mainNav button{
+    border: 1px solid white;
+}
+
+/****************
+***** HOME ******
+****************/
+
+#home{
+    background-image: url('../img/background-3883181_1920.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#home h1{
+    color: #ffff;
+}
+
+.text-home{
+    padding-top: 250px;
+}
+
+#home img{
+    width: 50%;
+}
+
+
+/****************
+*** LINK PAGE ***
+****************/
+
+/****************
+**** FOOTER *****
+****************/
