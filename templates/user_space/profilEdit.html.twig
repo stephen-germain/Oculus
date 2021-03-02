@@ -1,0 +1,20 @@
+{% extends 'baseUser.html.twig' %}
+
+{% block title %}Modification du profil{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{form_start(formUser)}}
+                    {{form_widget(formUser)}}
+                    <button class="btn btn-success">Envoyer</button>
+                {{form_end(formUser)}}
+            
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
