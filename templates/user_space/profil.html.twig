@@ -1,0 +1,44 @@
+{% extends 'baseUser.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-2 m-auto">
+                <h1 class="pt-5 text-center">Vos informations</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-4 offset-2 text-center py-3">
+                        <p>Prénom</p>
+                    </div>
+                    <div class="col-4 text-center py-3">
+                        <p>{{app.user.name}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4 offset-2 text-center py-3">
+                        <p>Adresse email</p>
+                    </div>
+                    <div class="col-4 text-center py-3">
+                        <p>{{app.user.email}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4 text-center py-3">
+                        <button>Modifier</button>
+                    </div>
+                    <div class="col-4 text-center py-3">
+                        <button>Supprimer Mot de passe</button>
+                    </div>
+                    <div class="col-4 text-center py-3">
+                        <button>Supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

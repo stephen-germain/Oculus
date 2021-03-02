@@ -3,15 +3,12 @@
 {% block title %}Espace utilisateur{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-3 m-auto example-wrapper text-center">
+                <h1>Bienvenue sur ton Espace {{ app.user.name }}</h1>
+            </div>
+        </div>
+    </div>
 
-
-<div class="example-wrapper">
-    <h1>Bienvenue sur ton Espace {{ app.user.name }}!</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/MAMP/htdocs/SymfonyProjet/oculus/src/Controller/UserSpaceController.php'|file_link(0) }}">src/Controller/UserSpaceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/MAMP/htdocs/SymfonyProjet/oculus/templates/user_space/index.html.twig'|file_link(0) }}">templates/user_space/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}
