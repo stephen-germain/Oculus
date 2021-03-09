@@ -1,0 +1,39 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Liste des membres{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center py-5">Liste des membres</h1>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <p>Prénom</p>
+                </div>
+                <div class="col-4">
+                    <p>Email</p>
+                </div>
+                <div class="col-4">
+                    <p>Rôle</p>
+                </div> 
+            </div>
+            {% for user in users %}
+                <div class="row">
+                    <div class="col-4">
+                        <p>{{ user.name }}</p>
+                     </div>
+                    <div class="col-4">
+                        <p>{{ user.email }}</p>
+                    </div>
+                    <div class="col-4">
+                        <p>{{ user.roles|join(' +' )|lower }}</p>
+                    </div>
+                </div>      
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
