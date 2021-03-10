@@ -22,14 +22,18 @@
             </div>
             {% for user in users %}
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-3">
                         <p>{{ user.name }}</p>
                      </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <p>{{ user.email }}</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <p>{{ user.roles|join(' +' )|lower }}</p>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="{{ path('admin_user_update', {'id':user.id}) }}"><button>Modifier</button></a>
                     </div>
                 </div>      
             {% endfor %}

@@ -32,6 +32,11 @@ class Links
      */
     private $url;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $type;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Links
     public function setUrl(string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getType(): ?int
+    {
+        return $this->type;
+    }
+
+    public function setType(int $type): self
+    {
+        $this->type = $type;
 
         return $this;
     }

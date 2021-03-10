@@ -47,4 +47,16 @@ class LinksRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findByType($value)
+    {
+        return $this->createQueryBuilder('l')
+            ->andWhere('l.type = :val')
+            ->setParameter('val', $value)
+            ->orderBy('l.id', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }

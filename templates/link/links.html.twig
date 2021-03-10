@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liens VR{% endblock %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+             <h1>Liens VR</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            {% for games in game %}
+                <p>{{ games.title }}</p>
+                <p>{{ games.text }}</p>
+                <a href="{{ games.url }}">Lien</a>
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            {% for videos in video %}
+                <p>{{ videos.title }}</p>
+                <p>{{ videos.text }}</p>
+                <a href="{{ videos.url }}">Lien</a>
+            {% endfor %}
+        </div>
+    </div>
+        
+        
+</div>
+{% endblock %}
