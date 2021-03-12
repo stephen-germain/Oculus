@@ -49,7 +49,7 @@ class AdminLinksController extends AbstractController
             );
         }
         
-        return $this->render('admin/adminLinkForm.html.twig', [
+        return $this->render('admin/adminAddLink.html.twig', [
            'formLink' => $form->createView()
         ]);
     }
@@ -57,28 +57,48 @@ class AdminLinksController extends AbstractController
     /**
      * @Route("/admin/links/update-{id}", name="admin_links_update")
      */
-    public function linkUpdate(LinksRepository $linksRepository)
+    public function linkUpdate(LinksRepository $linksRepository, Request $request, $id)
     {
-        $link1 = $linksRepository->findByType(1);
-        $link2 = $linksRepository->findBytype(2);
+        $link = $linksRepository->find($id);
 
-        return $this->render('admin/adminLinks.html.twig', [
-            'game' => $link1,
-            'video' => $link2,
+        $form = $this->createForm(AdminLinksType::class, $link);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            $manager = $this->getDoctrine()->getManager();
+            $manager->persist($link);
+            $manager->flush();
+
+            return $this->redirectToRoute('admin_links');
+
+            $this->addFlash(
+                'success',
+                'Le lien à bien été modifié'
+            );
+        }
+
+        return $this->render('admin/adminUpdateLink.html.twig', [
+            'updateLink' => $form->createView()
         ]);
     }
 
     /**
-     * @Route("/admin/links/delete", name="admin_links_delete")
+     * @Route("/admin/links/delete-{id}", name="admin_links_delete")
      */
-    public function linkDelete(LinksRepository $linksRepository)
+    public function linkDelete(LinksRepository $linksRepository, $id)
     {
-        $link1 = $linksRepository->findByType(1);
-        $link2 = $linksRepository->findBytype(2);
+        $link = $linksRepository->find($id);
 
-        return $this->render('admin/adminLinks.html.twig', [
-            'game' => $link1,
-            'video' => $link2,
-        ]);
+        $manager = $this->getDoctrine()->getManager();
+        $manager->remove($link);
+        $manager->flush();
+
+        $this->addFlash(
+            'success',
+            'Le lien à bien été supprimé'
+        );
+
+        return $this->redirectToRoute('admin_links');
     }
 }

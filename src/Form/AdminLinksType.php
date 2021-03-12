@@ -28,7 +28,7 @@ class AdminLinksType extends AbstractType
                     'placeholder' => 'Description'
                 ]
             ])
-            ->add('url', EmailType::class, [
+            ->add('url', TextType::class, [
                 'required' => true,
                 'label' => 'Adresse du site',
                 'attr' => [

@@ -1,0 +1,20 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}Modifier le lien{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                {{form_start(updateLink)}}
+                    {{form_widget(updateLink)}}
+                    <button class="btn btn-success">Envoyer</button>
+                {{form_end(updateLink)}}
+            
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

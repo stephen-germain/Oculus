@@ -17,8 +17,8 @@
                 <p>{{ games.title }}</p>
                 <p>{{ games.text }}</p>
                 <a href="{{ games.url }}">Lien</a>
-                <a href=""><button>Modifier</button></a>
-                <a href=""><button>Supprimer</button></a>
+                <a href="{{ path('admin_links_update', {'id':games.id})}}"><button>Modifier</button></a>
+                <a href="{{ path('admin_links_delete', {'id':games.id})}}"><button>Supprimer</button></a>
             {% endfor %}
         </div>
         <div class="col-md-6">
@@ -26,8 +26,8 @@
                 <p>{{ videos.title }}</p>
                 <p>{{ videos.text }}</p>
                 <a href="{{ videos.url }}">Lien</a>
-                <a href=""><button>Modifier</button></a>
-                <a href=""><button>Supprimer</button></a>
+                <a href="{{ path('admin_links_update', {'id':videos.id})}}"><button>Modifier</button></a>
+                <a href="{{ path('admin_links_delete', {'id':videos.id})}}"><button>Supprimer</button></a>
             {% endfor %}
         </div>
     </div>
