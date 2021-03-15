@@ -5,29 +5,42 @@
 {% block body %}
 
 
-<div class="container">
+<div class="container py-5">
     <div class="row">
         <div class="col-12 text-center">
              <h1>Liens VR</h1>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            {% for games in game %}
-                <p>{{ games.title }}</p>
-                <p>{{ games.text }}</p>
-                <a href="{{ games.url }}">Lien</a>
-            {% endfor %}
+    <div class="container ">
+        <div class="row ">
+            <div class="col-12">
+                <h2>Games</h2>
+            </div>
+            <div class="col-12 ">
+                {% for games in game %}
+                    <div class="border border-white bg-white">
+                        <p>{{ games.title }}</p>
+                        <p>{{ games.text }}</p>
+                        <a href="{{ games.url }}">Lien</a>
+                    </div>
+                    
+                {% endfor %}
+            </div>
         </div>
-        <div class="col-md-6">
-            {% for videos in video %}
-                <p>{{ videos.title }}</p>
-                <p>{{ videos.text }}</p>
-                <a href="{{ videos.url }}">Lien</a>
-            {% endfor %}
+        <div class="row">
+            <div class="col-12">
+                <h2>Video</h2>
+            </div>
+            <div class="col-12 ">
+                {% for videos in video %}
+                    <div class="border border-dark bg-white">
+                        <p>{{ videos.title }}</p>
+                        <p>{{ videos.text }}</p>
+                        <a href="{{ videos.url }}">Lien</a>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-    </div>
-        
-        
+    </div>    
 </div>
 {% endblock %}

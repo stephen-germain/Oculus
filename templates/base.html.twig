@@ -19,7 +19,7 @@
         {% block stylesheets %}{% endblock %}
 
     </head>
-    <body>
+    <body id="baseHome">
        {# <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -160,8 +160,33 @@
                 </div>
             </nav>
         </header>
+        
 
         {% block body %}{% endblock %}
+        <footer>
+
+          <footer class="page-footer font-small blue">
+            <div class="footer-copyright text-center">
+                <div class="container pt-5">
+                    <div class="row">
+                        {# <div class="col-12 py-2">
+                            <a class="chevrontop"href="#top">
+                                <svg class="chevronUp network" width="1.6em" height="1.6em" viewBox="0 0 16 16" class="bi bi-chevron-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                                </svg>
+                            </a>
+                        </div> #}
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="text-white">© 2021 Copyright <strong class="font-weight-normal">Stephen Germain</strong> | <a class="text-decoration-none" href="#">{% trans %}Mentions légales{% endtrans %}</a><br><a class="text-decoration-none" href="#">{% trans %}Politique de confidentialité{% endtrans %}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        
+        </footer>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
