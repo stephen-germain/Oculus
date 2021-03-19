@@ -3,44 +3,68 @@
 {% block title %}Liens VR{% endblock %}
 
 {% block body %}
-
-
-<div class="container py-5">
-    <div class="row">
-        <div class="col-12 text-center">
-             <h1>Liens VR</h1>
-        </div>
-    </div>
-    <div class="container ">
-        <div class="row ">
-            <div class="col-12">
-                <h2>Games</h2>
+    <section id="link">
+        <div class="container-fluid titleLink">
+            <div class="row">
+                <div class="col-12 text-center backgroundTitle">
+                    <h1 class="py-5">Liens VR</h1>
+                </div>
             </div>
-            <div class="col-12 ">
-                {% for games in game %}
-                    <div class="border border-white bg-white">
-                        <p>{{ games.title }}</p>
-                        <p>{{ games.text }}</p>
-                        <a href="{{ games.url }}">Lien</a>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div>
+                    <img src="{{ asset('img/virtual-projection-of-lights-forming-triangular-patterns-and-flowing-forward.jpg')}}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row linkGame">
+                <div class="row">
+                    <div class="col-12 text-center text-white py-5">
+                        <h2>Games</h2>
                     </div>
-                    
-                {% endfor %}
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <h2>Video</h2>
-            </div>
-            <div class="col-12 ">
-                {% for videos in video %}
-                    <div class="border border-dark bg-white">
-                        <p>{{ videos.title }}</p>
-                        <p>{{ videos.text }}</p>
-                        <a href="{{ videos.url }}">Lien</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 m-auto overflow-auto py-5 heightBlock border border-light">
+                        {% for games in game %}
+                            <div class="row">
+                                <div class="col-md-8 text-center text-white">
+                                    <h2>{{ games.title }}</h2>
+                                    <p>{{ games.text }}</p>
+                                </div>
+                                <div class="col-md-4 text-center position-relative">
+                                    <a class="position-absolute top-50 start-50 translate-middle" href="{{ games.url }}"><button class="buttonLink">Accéder au lien</button></a>
+                                </div>
+                                <div class="liseret"></div>
+                            </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                </div>
             </div>
-        </div>
-    </div>    
-</div>
+            <div class="row linkVideo">
+                <div class="row">
+                    <div class="col-12 text-center py-5 text-white">
+                        <h2>Video 360</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 m-auto overflow-auto py-5 heightBlock border border-light">
+                        {% for videos in video %}
+                            <div class="row">
+                                <div class="col-md-8 text-center text-white">
+                                    <h2 class="pt-4">{{ videos.title }}</h2>
+                                    <p>{{ videos.text }}</p>
+                                </div>
+                                <div class="col-md-4 text-center position-relative py-4">
+                                    <a class="position-absolute top-50 start-50 translate-middle" href="{{ videos.url }}"><button class="buttonLink">Accéder au lien</button></a>
+                                </div>
+                                <div class="liseret"></div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
 {% endblock %}

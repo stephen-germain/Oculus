@@ -4,30 +4,30 @@
 ****************/
 
 body{
-     margin:0;
+    margin:0;
     padding:0;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-	  display: flex;
-	  flex-direction: column;
-	  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 } 
 html {
     position: relative;
     min-height: 100%;
-  }
+}
 
 .mainFoot{
     flex: 1;
-  }
+}
 
 /****************
 **** HEADER *****
 ****************/
 
 /* header{
-    height: 200px;
-} */
+    height: 35px;
+}  */
 
  #mainNav button{
     border: 1px solid white;
@@ -50,7 +50,7 @@ html {
 }
 
 .text-home{
-    padding-top: 250px;
+    padding-top: 100px;
 }
 
 #home img{
@@ -61,6 +61,78 @@ html {
 /****************
 *** LINK PAGE ***
 ****************/
+
+#link{
+    background-color: #000;
+}
+
+.titleLink{
+    padding-top: 58px;
+}
+
+/* .linkGame{
+    background-color: #79a7D3;
+}
+
+.linkVideo{
+    background-color: #6883BC;
+} */
+
+/* .backgroundTitle{
+    background-image: url('../img/11632.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+} */
+
+.backgroundTitle h1{
+    color: #FA4703;
+}
+
+.heightBlock{
+    height: 430px;
+}
+
+.liseret{
+    border-bottom: 1px solid white;
+    padding-top: 25px;
+    width: 90%;
+    margin: auto;
+}
+
+.buttonLink{
+    background-color: #FA4703;
+    border: 1px solid #FA4703;
+}
+
+/****************
+*** USER SPACE **
+****************/
+
+#baseUser{
+    background-image: url('../img/13167.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/****************
+***** ADMIN *****
+****************/
+
+#baseAdmin{
+    background-image: url('../img/5073414.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffff;
+}
+
+.w3-theme-d2 {
+    color:#fff !important;background-color: #4687c3 !important}
 
 /****************
 **** FOOTER *****

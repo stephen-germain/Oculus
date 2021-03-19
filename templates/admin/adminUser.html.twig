@@ -22,22 +22,26 @@
             </div>
             {% for user in users %}
                 <div class="row">
+                   
                     <div class="col-3">
                         <p>{{ user.name }}</p>
+                        <hr>
                      </div>
                     <div class="col-3">
                         <p>{{ user.email }}</p>
+                        <hr>
                     </div>
                     <div class="col-3">
                         <p>{{ user.roles|join(' +' )|lower }}</p>
+                        <hr>
                     </div>
-
                     <div class="col-3">
                         <a href="{{ path('admin_user_update', {'id':user.id}) }}"><button>Modifier</button></a>
+                        <hr>
                     </div>
+                   
                 </div>      
             {% endfor %}
-            </div>
         </div>
     </div>
 {% endblock %}
