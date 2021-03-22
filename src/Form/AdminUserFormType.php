@@ -17,7 +17,8 @@ class AdminUserFormType extends AbstractType
                 'label' => 'Rôles',
                 'choices' => [
                     'Utilisateur' => 'ROLE_USER',
-                    'Administrateur' => 'ROLE_ADMIN'
+                    'Administrateur' => 'ROLE_ADMIN',
+                    'Super Admin' => 'ROLE_SUPER_ADMIN'
                 ],
                 'expanded' => true,
                 'multiple' => true,

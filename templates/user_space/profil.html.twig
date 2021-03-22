@@ -6,35 +6,35 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 offset-2 m-auto">
-                <h1 class="pt-5 text-center">Vos informations</h1>
+                <h1 class="pt-5 text-center text-white">Vos informations</h1>
                 <hr>
                 <div class="row">
-                    <div class="col-4 offset-2 text-center py-3">
-                        <p>Prénom</p>
+                    <div class="col-4 offset-2 text-center py-2">
+                        <p class="text-white">Prénom</p>
                     </div>
-                    <div class="col-4 text-center py-3">
-                        <p>{{app.user.name}}</p>
+                    <div class="col-4 text-center py-2">
+                        <p class="text-white">{{app.user.name}}</p>
                     </div>
+                    <div class="liseret"></div>
                 </div>
-                <hr>
                 <div class="row">
-                    <div class="col-4 offset-2 text-center py-3">
-                        <p>Adresse email</p>
+                    <div class="col-4 offset-2 text-center py-2">
+                        <p class="text-white">Adresse email</p>
                     </div>
-                    <div class="col-4 text-center py-3">
-                        <p>{{app.user.email}}</p>
+                    <div class="col-4 text-center py-2">
+                        <p class="text-white">{{app.user.email}}</p>
                     </div>
+                    <div class="liseret"></div>
                 </div>
-                <hr>
                 <div class="row">
                     <div class="col-4 text-center py-3">
-                        <a href="{{ path('profil_update')}}"><button>Modifier</button></a>
+                        <a href="{{ path('profil_update')}}"><button class="buttonProfil">Modifier</button></a>
                     </div>
                     <div class="col-4 text-center py-3">
-                        <a href="{{ path('profil_resetPassword')}}"><button>Modifier Mot de passe</button></a>
+                        <a href="{{ path('profil_resetPassword')}}"><button class="buttonProfil">Modifier Mot de passe</button></a>
                     </div>
                     <div class="col-4 text-center py-3">
-                        <a href="{{ path('profil_delete')}}"><button>Supprimer</button></a>
+                        <a href="{{ path('profil_delete')}}"><button class="buttonProfil">Supprimer</button></a>
                     </div>
                 </div>
             </div>

@@ -111,11 +111,20 @@ html {
 ****************/
 
 #baseUser{
-    background-image: url('../img/13167.jpg');
+    background-image: url('../img/4912487.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.w3-theme-d3 {
+    color:#000 !important;background-color: #FA4703 !important
+}
+
+.buttonProfil{
+    background-color: #FA4703;
+    border-color: #fff 1px;
 }
 
 /****************
@@ -132,7 +141,8 @@ html {
 }
 
 .w3-theme-d2 {
-    color:#fff !important;background-color: #4687c3 !important}
+    color:#fff !important;background-color: #4687c3 !important
+}
 
 /****************
 **** FOOTER *****
