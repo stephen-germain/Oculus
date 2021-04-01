@@ -28,13 +28,36 @@
                 </div>
                 <div class="row">
                     <div class="col-4 text-center py-3">
-                        <a href="{{ path('profil_update')}}"><button class="buttonProfil">Modifier</button></a>
+                        <a href="{{ path('profil_update')}}"><button class="buttonProfil">Modifier mon profil</button></a>
                     </div>
                     <div class="col-4 text-center py-3">
                         <a href="{{ path('profil_resetPassword')}}"><button class="buttonProfil">Modifier Mot de passe</button></a>
                     </div>
+                    <!-- Button trigger modal -->
                     <div class="col-4 text-center py-3">
-                        <a href="{{ path('profil_delete')}}"><button class="buttonProfil">Supprimer</button></a>
+                        <button type="button" class="buttonProfil" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Supprimer le compte
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    {# <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> #}
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Attention vous allez supprimer votre compte!</p>
+                                    <p>Voulez-vous continuer?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <a href="{{ path('profil_delete')}}"><button class="buttonProfil">Supprimer</button></a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

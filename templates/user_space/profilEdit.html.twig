@@ -6,15 +6,20 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-12 text-center text-white py-5">
+                <h1>Modification du profil</h1>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 text-white">
                 {{form_start(formUser)}}
                     {{form_widget(formUser)}}
-                    <button class="btn btn-success">Envoyer</button>
+                    <div class="col-12 text-center">
+                        <button class="buttonProfil my-3">Envoyer</button>
+                    </div>
                 {{form_end(formUser)}}
-            
             </div>
         </div>
     </div>
-
 
 {% endblock %}
